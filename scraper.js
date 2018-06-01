@@ -1,5 +1,4 @@
 var HLTV = require('hltv');
-
 var request = require("request");
 var sqlite3 = require("sqlite3").verbose();
 
@@ -37,11 +36,13 @@ function fetchPage(url, callback) {
 		callback(body);
 	});
 }
-
+then(res => console.log(res))
 function run(db) {
-    HLTV.getMatch({id: 2306295}).then(res) => {
+    HLTV.getMatch({id: 2306295}).then(res => {
 	     console.log(res);
-        };
+                var value = res.text().trim();
+            updateRow(db, value);
+        });
 
         readRows(db);
 
