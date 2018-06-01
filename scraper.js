@@ -36,7 +36,7 @@ function fetchPage(url, callback) {
 		callback(body);
 	});
 }
-then(res => console.log(res))
+
 function run(db) {
     HLTV.getMatch({id: 2306295}).then(res => {
 	     console.log(res);
