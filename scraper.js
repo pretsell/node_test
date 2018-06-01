@@ -38,14 +38,8 @@ function fetchPage(url, callback) {
 }
 
 function run(db) {
-    HLTV.getMatch({id: 2306295}).then(res => {
-	     console.log(res);
-                var value = res.text().trim();
-            updateRow(db, value);
-        });
-
+    HLTV.getMatch({id: 2306295}).then(res => { console.log(res) })
         readRows(db);
-
         db.close();
 }
 
