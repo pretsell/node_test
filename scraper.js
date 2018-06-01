@@ -1,4 +1,4 @@
-var HLTV = require('hltv');
+const { HLTV } = require('hltv')
 var request = require("request");
 var sqlite3 = require("sqlite3").verbose();
 
@@ -36,9 +36,9 @@ function fetchPage(url, callback) {
 		callback(body);
 	});
 }
-
+(res => console.log(res))
 function run(db) {
-    HLTV.getMatch({id: 2306295}).then(res => { console.log(res) })
+    HLTV.getMatch({id: 2306295}).then(res => console.log(res))
         readRows(db);
         db.close();
 }
