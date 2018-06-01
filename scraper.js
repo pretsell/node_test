@@ -38,10 +38,11 @@ function fetchPage(url, callback) {
 }
 
 function run(db) {
-    HLTV.getMatchesStats({startDate: '2018-05-.31', endDate: '2018-06-1'}).then((res => console.log(res))
+    HLTV.getMatchesStats({startDate: '2018-05-.31', endDate: '2018-06-1'}).then(res => console.log(res))
         readRows(db);
         db.close();
 }
+HLTV.getMatchesStats({startDate: '2018-05-.31', endDate: '2018-06-1'}).then((res) => {
 initDatabase(run);
 
 //function run(db) {
