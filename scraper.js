@@ -1,4 +1,4 @@
-const { HLTV } = require('hltv')
+var HLTV = require('hltv')
 
 var request = require("request");
 var sqlite3 = require("sqlite3").verbose();
