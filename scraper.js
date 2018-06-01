@@ -36,9 +36,13 @@ function fetchPage(url, callback) {
 		callback(body);
 	});
 }
-(res => console.log(res))
+
 function run(db) {
-    HLTV.getMatch({id: 2306295}).then(res => console.log(res))
+    HLTV.getMatch({id: 2306295}).then(res { 
+    	console.log(res);
+    });
+    	
+        updateRow(db, value);
         readRows(db);
         db.close();
 }
