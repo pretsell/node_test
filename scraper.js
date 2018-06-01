@@ -44,3 +44,14 @@ function run(db) {
 }
 
 initDatabase(run);
+
+//function run(db) {
+//    HLTV.getMatch({id: 2306295}).then(res => handlerow(res))
+//        readRows(db);
+//        db.close();
+//}
+//function handlerow (res) {
+//var value = res
+//            updateRow(db, value);
+//}
+//initDatabase(run);
