@@ -48,7 +48,7 @@ function run(db) {
         readRows(db);
 
         db.close();
-    });
+    };
 }
 
 initDatabase(run);
